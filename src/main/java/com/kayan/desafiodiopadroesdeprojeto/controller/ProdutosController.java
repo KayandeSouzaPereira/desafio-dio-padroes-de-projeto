@@ -11,7 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.kayan.desafiodiopadroesdeprojeto.service.produto.ProdutoService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @RestController
+@Tag(name="1. Produtos")
 @RequestMapping("produtos")
 public class ProdutosController {
 	

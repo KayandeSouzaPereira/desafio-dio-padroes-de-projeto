@@ -2,6 +2,9 @@ package com.kayan.desafiodiopadroesdeprojeto.model.produto;
 
 public class ProdutoFisico extends Produto {
 	public int limite = 10;
+	public int id = 1;
+	public String nome = "Produto Foto de Compra Limitada - Para iniciar a compra, utilize o endpoint '/compras/1'";
+	public int valor = 20;
 	
 	public ProdutoFisico() {
 	}
@@ -10,7 +13,9 @@ public class ProdutoFisico extends Produto {
 		super(produtoFisico);
 		if(produtoFisico != null) {
 			this.limite = produtoFisico.limite;
-			this.id = 1;
+			this.id = produtoFisico.id;
+			this.nome = produtoFisico.nome;
+			this.valor = produtoFisico.valor;
 		}
 	}
 	

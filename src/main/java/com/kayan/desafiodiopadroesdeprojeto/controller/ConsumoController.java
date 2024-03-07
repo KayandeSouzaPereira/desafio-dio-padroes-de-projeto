@@ -18,7 +18,10 @@ import com.kayan.desafiodiopadroesdeprojeto.service.transporte.Entrega;
 import com.kayan.desafiodiopadroesdeprojeto.service.transporte.Rota;
 import com.kayan.desafiodiopadroesdeprojeto.service.transporte.Transporte;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @RestController
+@Tag(name="3. Entrega e Consumo")
 @RequestMapping("consumo")
 public class ConsumoController {
 	
@@ -31,7 +34,6 @@ public class ConsumoController {
 	public ResponseEntity<Object> buscarPorId(@PathVariable Long id,@PathVariable Long etapa) {
 		Map<String, Object> object = new HashMap<String, Object>();
 		if(id == 1) {
-			System.out.println("Etapa : " + etapa);
 			Transporte transporte = Transporte.link(
 		            new Empacotamento(etapa),
 		            new Rota(etapa),
@@ -41,6 +43,7 @@ public class ConsumoController {
 			if(etapa == 4) {
 				return ResponseEntity.ok()
 					      .contentType(MediaType.IMAGE_JPEG)
+					      
 					      .body(consumoService.buscarPorIdConsumoFisicos(id).getImagemFisico());
 				
 			}
