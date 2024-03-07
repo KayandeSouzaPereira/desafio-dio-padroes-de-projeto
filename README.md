@@ -19,7 +19,7 @@ Um prototipo de api de E-commerce com as funções:
 ## Padrões de Projeto utilizados
 
 - Abstract Factory (Para Objetos do tipo Compra)
-- Singleton (Em )
+- Singleton (Nas anotações do tipo @Autowired)
 - Prototype (Para Objetos do tipo Produto)
 - ChainOfResponsibility (Para a função de retorno das etapas de transporte)
 - Facade (Para o enriquecimento de produtos consumidos)
@@ -33,7 +33,10 @@ Instale Projeto em sua maquina local.
   git clone branch_url
   
 ```
-    
+## Documentação
+
+A documentação Swagger pode ser encontrada ao iniciar o projeto pelo endpoint `/swagger-ui/index.html`.
+
 ## Autores
 
 - [@kayandesouza](https://github.com/KayandeSouzaPereira) Desenvolvedor do App
